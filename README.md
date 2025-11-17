@@ -91,9 +91,9 @@ No server required — works instantly.
 
 👤 Developer
 
-Tunahan Coşgun – TunaSoft Tech
+Tunahan Coşgun
 Full-Stack Developer
-GitHub: https://github.com/your-username
+GitHub: https://github.com/tunacosgum
 
 📜 License
 
