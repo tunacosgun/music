@@ -1,0 +1,341 @@
+/* Custom CSS for enhanced piano styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Crimson Text', 'Playfair Display', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #92400e, #d97706, #92400e);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Vintage American Typography */
+.font-serif {
+  font-family: 'Playfair Display', 'Crimson Text', serif;
+}
+
+/* Classic Wood Grain Effect */
+.wood-grain {
+  background: 
+    linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.1) 50%), 
+    linear-gradient(0deg, #8b4513, #d2691e, #cd853f, #daa520);
+  background-size: 4px 100%, 100% 100%;
+}
+
+/* Piano-specific animations and effects */
+.piano-key-pressed {
+  animation: keyPress 0.15s ease-out;
+}
+
+@keyframes keyPress {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Responsive piano scaling - fit all keys in one frame */
+@media (max-width: 1400px) {
+  .piano-container {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .piano-container {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .piano-container {
+    transform: scale(0.7);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .piano-container {
+    transform: scale(0.6);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .piano-container {
+    transform: scale(0.5);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .piano-container {
+    transform: scale(0.4);
+    transform-origin: center;
+  }
+}
+
+/* Black key specific styling - Proper Black Keys */
+.black-key {
+  background: linear-gradient(to bottom, #2a2a2a 0%, #000000 100%) !important;
+  border: 1px solid #333 !important;
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.8),
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    inset 0 -1px 0 rgba(0,0,0,1) !important;
+  color: #fff !important;
+}
+
+.black-key:hover {
+  background: linear-gradient(to bottom, #3a3a3a 0%, #111111 100%) !important;
+  border: 1px solid #444 !important;
+  box-shadow: 
+    0 4px 10px rgba(0,0,0,0.9),
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    inset 0 -1px 0 rgba(0,0,0,1) !important;
+}
+
+.black-key:active, .black-key.pressed {
+  background: linear-gradient(to bottom, #555 0%, #222 100%) !important;
+  border: 1px solid #666 !important;
+  box-shadow: 
+    inset 0 3px 6px rgba(0,0,0,0.9),
+    0 1px 3px rgba(0,0,0,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.05) !important;
+  /* No transform - completely static when pressed */
+}
+
+/* Vintage Gold Accents */
+.text-gold-400 {
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+}
+
+/* American Classic Animations */
+@keyframes americanFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.App {
+  animation: americanFade 1.2s ease-out;
+}
+
+/* Vintage Button Hover Effects */
+.vintage-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Classic American Border Styling */
+.classic-border {
+  border: 4px solid;
+  border-image: linear-gradient(45deg, #d97706, #fbbf24, #d97706) 1;
+  border-radius: 8px;
+}
+
+/* White key specific styling - Classic Piano Style - Proper White Keys */
+.white-key {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%) !important;
+  border: 2px solid #ddd !important;
+  box-shadow: 
+    0 6px 12px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 -2px 0 rgba(0,0,0,0.1) !important;
+  color: #333 !important;
+}
+
+.white-key:hover {
+  background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 100%) !important;
+  border: 2px solid #ccc !important;
+  box-shadow: 
+    0 6px 14px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 -2px 0 rgba(0,0,0,0.15) !important;
+}
+
+.white-key:active, .white-key.pressed {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #e8e8e8 100%) !important;
+  border: 2px solid #bbb !important;
+  box-shadow: 
+    inset 0 3px 6px rgba(0,0,0,0.2),
+    0 2px 4px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  transform: translateY(2px) scale(0.98);
+}
+
+/* Synth White Keys - Futuristic Black Main Keys (Inverted Piano) */
+.synth-white-key {
+  background: linear-gradient(to bottom, #1a1a1a 0%, #000000 100%) !important;
+  border: 3px solid #00bfff !important;
+  box-shadow: 
+    0 6px 12px rgba(0,191,255,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    inset 0 -2px 0 rgba(0,191,255,0.2),
+    0 0 15px rgba(0,255,255,0.3) !important;
+  color: #00bfff !important;
+}
+
+.synth-white-key:hover {
+  background: linear-gradient(to bottom, #2a2a2a 0%, #111111 100%) !important;
+  border: 3px solid #00d4ff !important;
+  box-shadow: 
+    0 6px 14px rgba(0,191,255,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    inset 0 -2px 0 rgba(0,191,255,0.3),
+    0 0 20px rgba(0,255,255,0.5) !important;
+  transform: translateY(-1px);
+}
+
+.synth-white-key:active, .synth-white-key.pressed {
+  background: linear-gradient(to bottom, #333333 0%, #1a1a1a 100%) !important;
+  border: 3px solid #0099cc !important;
+  box-shadow: 
+    inset 0 3px 6px rgba(0,0,0,0.8),
+    0 2px 4px rgba(0,191,255,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    0 0 25px rgba(0,255,255,0.8) !important;
+  transform: translateY(2px) scale(0.98);
+}
+
+/* Synth Black Keys - Futuristic White Accent Keys (Inverted Piano) */
+.synth-black-key {
+  background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 100%) !important;
+  border: 2px solid #ff00ff !important;
+  box-shadow: 
+    0 4px 8px rgba(255,0,255,0.6),
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 -1px 0 rgba(255,0,255,0.2),
+    0 0 15px rgba(255,0,255,0.4) !important;
+  color: #ff00ff !important;
+}
+
+.synth-black-key:hover {
+  background: linear-gradient(to bottom, #ffffff 0%, #e8e8e8 100%) !important;
+  border: 2px solid #ff44ff !important;
+  box-shadow: 
+    0 4px 10px rgba(255,0,255,0.7),
+    inset 0 1px 0 rgba(255,255,255,1),
+    inset 0 -1px 0 rgba(255,0,255,0.3),
+    0 0 20px rgba(255,0,255,0.6) !important;
+}
+
+.synth-black-key:active, .synth-black-key.pressed {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%) !important;
+  border: 2px solid #cc00cc !important;
+  box-shadow: 
+    inset 0 3px 6px rgba(0,0,0,0.2),
+    0 1px 3px rgba(255,0,255,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    0 0 30px rgba(255,0,255,1) !important;
+  /* No transform - completely static when pressed */
+}
+
+/* Enhanced scrollbar for horizontal scrolling */
+.piano-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.piano-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.piano-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.piano-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure buttons don't have default styling */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Gold/brass color for piano branding */
+.text-gold-400 {
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+/* Enhanced glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Subtle animation for the entire app */
+.App {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent text selection on piano keys */
+.piano-key {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Focus states for accessibility */
+button:focus-visible {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px;
+}
+
+/* Sound wave animation (for future enhancement) */
+@keyframes soundWave {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
+.sound-wave {
+  animation: soundWave 0.5s ease-in-out;
+}
